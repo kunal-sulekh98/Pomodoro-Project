@@ -1,18 +1,17 @@
-import customtkinter
 
-#Sabka Saath Sabka Vikas
+from settings import *
+import customtkinter as ctk
 
-customtkinter.set_appearance_mode("System")  # Modes: system (default), light, dark
-customtkinter.set_default_color_theme("blue")  # Themes: blue (default), dark-blue, green
+class App(ctk.CTk):
+    
+    def __init__(self):
 
-app = customtkinter.CTk()  # create CTk window like you do with the Tk window
-app.geometry("400x240")
+        #window setup
+        super().__init__(fg_color = GREEN)
 
-def button_function():
-    print("button pressed")
+        self.mainloop()
 
-# Use CTkButton instead of tkinter Button
-button = customtkinter.CTkButton(master=app, text="CTkButton", command=button_function)
-button.place(relx=0.5, rely=0.5, anchor=customtkinter.CENTER)
+App()
 
-app.mainloop()
+
+
